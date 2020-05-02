@@ -1,3 +1,8 @@
 # 手写一个 WebSocket 协议
 
-## 为什么要使用websocket协议（以下简称ws协议），什么场景会使用？
+## WebSocket 服务端实现
+- https://socket.io/
+- https://github.com/theturtle32/WebSocket-Node
+- https://github.com/websockets/ws
+- https://github.com/uWebSockets/uWebSockets
+
