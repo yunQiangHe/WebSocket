@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>websocket在H5中的使用案例</title>
+</head>
+
+<body>
+
+    <a href="javascript:WebSocketTest()">运行WebSocket</a>
+
+    <script>
+        function WebSocketTest() {
+            if ("WebSocket" in window) {
+                console.log("你的浏览器支持WebSocket");
+                //1. 创建一个web socket 
+                const ws = new WebSocket("ws://localhost:9998");
+
+                // Socket.onopen事件  连接建立时候触发
+                ws.onopen = () => {
+                    // WebSocket已经连接上 send()方法发送数据
+                    ws.send("何云强发送数据");
+                    console.log("数据发送》》》》");
+                }
+
+                // Socket.onmessage事件  客户端接收到服务端数据时候触发
+                ws.onmessage = (evt) => {
+                    let received_msg = evt.data;
+                    console.log("数据已接受》》》" + received_msg);
+                }
+
+                // Socket.onerror事件 通讯发送错误时候触发
+                ws.onerror = (evt) => {
+                    console.log("通讯发送");
+                }
+
+                // Socket.onclose事件  连接关闭时候触发
+                ws.onclose = (evt) => {
+                    console.log("连接关闭");
+                }
+
+
+            } else {
+                console.log("你的浏览器不支持WebSocket");
+            }
+        }
+    </script>
+</body>
+
+</html>

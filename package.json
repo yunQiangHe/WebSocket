@@ -1,0 +1,15 @@
+{
+  "name": "WebSocket",
+  "version": "1.0.0",
+  "description": "## 为什么要使用websocket协议（以下简称ws协议），什么场景会使用？",
+  "main": "serive.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^7.2.5"
+  }
+}
